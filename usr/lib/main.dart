@@ -40,13 +40,21 @@ class MyApp extends StatelessWidget {
 }
 
 // Simple data models
-data class Paper(
+class Paper {
   final String id;
   final String title;
   final List<String> authors;
   final String abstractText;
   final int year;
-)
+
+  Paper({
+    required this.id,
+    required this.title,
+    required this.authors,
+    required this.abstractText,
+    required this.year,
+  });
+}
 
 // In-memory repository (replace with real backend/DB later)
 class InMemoryRepo {
